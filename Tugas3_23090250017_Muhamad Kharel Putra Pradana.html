@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Data - Kharel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
 
+    <header id="main-header">
+        <h1>📊 Dashboard Analisis Penjualan</h1>
+        <p class="subtitle">Ringkasan performa penjualan bulanan — disusun oleh <strong>Kharel</strong></p>
+    </header>
+
+    <section class="profile-section">
+        <h2>Profil Analis Data</h2>
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQHmCD0FiK7-3g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1707073143124?e=1791417600&v=beta&t=XATjbBX3iayU8UkdC5bxC99UxCjf-lFtTnzxaS08OTQ" alt="Foto Profil" class="profile-photo">
+        <p>
+            Halo! Saya <strong>[Nama Anda]</strong>, mahasiswa Sains Data dengan NIM <strong>[NIM]</strong>.
+            Saya tertarik pada analisis data penjualan, visualisasi data, dan pengembangan dashboard interaktif.
+            Kunjungi <a href="https://github.com/" target="_blank">GitHub saya</a> untuk melihat proyek lainnya.
+        </p>
+    </section>
+
+    <!-- ============ KARTU METRIK (KPI) ============ -->
+    <section class="metrics-section">
+        <h2>Metrik Utama (KPI)</h2>
+        <div class="metric-card" id="total-revenue">
+            <h3>Total Pendapatan</h3>
+            <p class="metric-value">Rp 1.250.000.000</p>
+            <p class="metric-change positive">▲ 12.5% dari bulan lalu</p>
+        </div>
+        <div class="metric-card" id="total-orders">
+            <h3>Total Pesanan</h3>
+            <p class="metric-value">8.432</p>
+            <p class="metric-change positive">▲ 5.2% dari bulan lalu</p>
+        </div>
+        <div class="metric-card" id="avg-order">
+            <h3>Rata-rata Nilai Pesanan</h3>
+            <p class="metric-value">Rp 148.250</p>
+            <p class="metric-change negative">▼ 2.1% dari bulan lalu</p>
+        </div>
+    </section>
+
+    <!-- ============ TABEL DATA ============ -->
+    <section class="table-section">
+        <h2>Data Penjualan per Kategori Produk</h2>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Kategori Produk</th>
+                    <th>Jumlah Terjual</th>
+                    <th>Pendapatan (Rp)</th>
+                    <th>Kontribusi (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Elektronik</td>
+                    <td>2.150</td>
+                    <td>625.000.000</td>
+                    <td>50.0</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Fashion</td>
+                    <td>3.420</td>
+                    <td>375.000.000</td>
+                    <td>30.0</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Makanan & Minuman</td>
+                    <td>1.862</td>
+                    <td>187.500.000</td>
+                    <td>15.0</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Kesehatan</td>
+                    <td>1.000</td>
+                    <td>62.500.000</td>
+                    <td>5.0</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ============ FORM INPUT ============ -->
+    <section class="form-section">
+        <h2>Tambah Data Penjualan</h2>
+        <form>
+            <label for="kategori">Kategori Produk:</label>
+            <input type="text" id="kategori" name="kategori" placeholder="Contoh: Elektronik">
+
+            <label for="jumlah">Jumlah Terjual:</label>
+            <input type="text" id="jumlah" name="jumlah" placeholder="Contoh: 1500">
+
+            <label for="catatan">Catatan:</label>
+            <textarea id="catatan" name="catatan" rows="3" placeholder="Catatan tambahan..."></textarea>
+
+            <button type="submit">Simpan Data</button>
+        </form>
+    </section>
+
+    <!-- ============ ANALISIS MANDIRI ============ -->
+    <section class="analysis-section">
+        <h3>Analisis Perubahan Visual (HTML vs HTML+CSS):</h3>
+        <p>
+            [Jelaskan perbedaan yang paling terasa setelah file HTML Pertemuan 2 / dashboard ini diberi styling CSS.
+            Mengapa penggunaan margin, padding, dan warna membuat antarmuka dashboard menjadi jauh lebih nyaman dibaca?
+            Kaitkan dengan peran CSS dalam menyajikan data secara efektif.]
+        </p>
+    </section>
+
+</body>
+</html>
