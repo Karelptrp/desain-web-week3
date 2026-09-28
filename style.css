@@ -1,6 +1,8 @@
-
+/* RESET & GLOBAL STYLES */
 * {
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -8,134 +10,114 @@ body {
     background-color: #f4f6f9;
     color: #333333;
     line-height: 1.6;
-    margin: 20px;
-    padding: 0;
+    padding: 20px;
 }
 
+/* HEADER */
 #main-header {
     background-color: #ffffff;
     padding: 20px 30px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     margin-bottom: 25px;
+    text-align: center;
 }
 
-h1 {
-    color: #1e3a8a; 
-    text-align: center;
-    border-bottom: 3px solid #3b82f6;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+#main-header h1 {
+    color: #1e3a8a;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
 }
 
 .subtitle {
-    text-align: center;
     color: #64748b;
     font-size: 0.95rem;
-    margin: 0;
+}
+
+/* GENERAL CARD CONTAINER */
+.card-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
 }
 
 h2 {
     color: #2563eb;
-    margin-top: 30px;
+    font-size: 1.2rem;
     margin-bottom: 15px;
 }
 
-h3 {
-    color: #1e3a8a;
-    margin-top: 0;
-}
-
-.profile-section {
-    background-color: #ffffff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+/* ============================================================
+   1. FLEXBOX LAYOUT: METRICS / KPI CARDS (HORIZONTAL)
+   ============================================================ */
+.metrics-section {
+    display: flex;                   /* 1. Aktifkan mode Flexbox */
+    flex-direction: row;             /* 2. Susun horizontal */
+    justify-content: space-between;  /* 3. Distribusi spasi rata */
+    gap: 20px;                       /* 4. Spasi antar kartu */
     margin-bottom: 25px;
-}
-
-.profile-photo {
-    border-radius: 10px; /* Membuat foto profil bulat */
-    border: 3px solid #3b82f6;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: block;
-    margin: 0 auto 15px auto;
-}
-
-a {
-    color: #2563eb;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    color: #1d4ed8;
-    text-decoration: underline;
 }
 
 .metric-card {
+    flex: 1;                         /* 5. Setiap kartu mengambil porsi lebar sama rata */
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    border-left: 5px solid #8b5cf6; /* Aksen kiri */
+    border-left: 5px solid #3b82f6;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
 .metric-card h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #64748b;
-    margin-bottom: 5px;
-    font-weight: 600;
+    margin-bottom: 8px;
 }
 
 .metric-value {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: bold;
     color: #1e3a8a;
-    margin: 5px 0;
+    margin-bottom: 5px;
 }
 
 .metric-change {
-    font-size: 0.9rem;
-    font-weight: bold;
-    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
-.metric-change.positive {
-    color: #10b981; /* Hijau */
+.metric-change.positive { color: #10b981; }
+.metric-change.negative { color: #ef4444; }
+
+/* ============================================================
+   2. GRID LAYOUT: MAIN CONTENT & SIDEBAR (2 KOLOM)
+   ============================================================ */
+.dashboard-grid {
+    display: grid;                  /* 1. Aktifkan mode Grid */
+    grid-template-columns: 2.2fr 1fr;/* 2. Kolom kiri 2.2x lebih lebar dari kolom kanan */
+    gap: 25px;                       /* 3. Jarak antar kolom */
+    align-items: start;
 }
 
-.metric-change.negative {
-    color: #ef4444; /* Merah */
-}
-
-.table-section {
-    background-color: #ffffff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    margin-bottom: 25px;
-}
-
+/* TABEL STYLING */
 .data-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
-    background-color: #ffffff;
 }
 
-.data-table th,
+.data-table th, 
 .data-table td {
     padding: 12px;
     border: 1px solid #cbd5e1;
     text-align: left;
+    font-size: 0.9rem;
 }
 
 .data-table th {
     background-color: #2563eb;
-    color: white;
-    font-weight: 600;
+    color: #ffffff;
 }
 
 .data-table tr:nth-child(even) {
@@ -143,69 +125,75 @@ a:hover {
 }
 
 .data-table tr:hover {
-    background-color: #e0f2fe; 
+    background-color: #e0f2fe;
 }
 
-.form-section {
-    background-color: #ffffff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    margin-bottom: 25px;
+/* CHART PLACEHOLDER (FLEXBOX CENTERING) */
+.chart-placeholder {
+    height: 220px;
+    background-color: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    border-radius: 6px;
+    
+    /* Flexbox untuk memposisikan konten tepat di tengah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #64748b;
+    font-weight: 600;
 }
 
-form {
-    max-width: 500px;
+/* FORM STYLING */
+.form-group {
+    margin-bottom: 15px;
 }
 
 label {
     display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
     font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.88rem;
     color: #334155;
 }
 
 input[type="text"],
-textarea {
+input[type="number"] {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
     border: 1px solid #cbd5e1;
     border-radius: 4px;
-    box-sizing: border-box;
-    font-family: inherit;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
-input[type="text"]:focus,
-textarea:focus {
+input:focus {
     outline: none;
     border-color: #3b82f6;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
-button {
-    background-color: #10b981; /* Hijau */
-    color: white;
-    padding: 10px 20px;
+.btn-primary {
+    width: 100%;
+    background-color: #10b981;
+    color: #ffffff;
+    padding: 12px;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
     font-weight: bold;
-    margin-top: 15px;
+    cursor: pointer;
     font-size: 0.95rem;
 }
 
-button:hover {
+.btn-primary:hover {
     background-color: #059669;
 }
 
-.analysis-section {
-    background-color: #ffffff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    border-left: 5px solid #f59e0b; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    margin-bottom: 25px;
+/* RESPONSIVE LAYOUT (MEDIA QUERY) */
+@media (max-width: 900px) {
+    .metrics-section {
+        flex-direction: column;
+    }
+    
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
 }

@@ -3,115 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Data - Kharel</title>
+    <title>Dashboard Analisis Penjualan - Sains Data</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body> 
+<body>
 
     <header id="main-header">
         <h1>📊 Dashboard Analisis Penjualan</h1>
-        <p class="subtitle">Ringkasan performa penjualan bulanan — disusun oleh <strong>Kharel</strong></p>
+        <p class="subtitle">Ringkasan Performa &amp; Input Data Real-Time — Program Studi Sains Data</p>
     </header>
 
-    <section class="profile-section">
-        <h2>Profil Analis Data</h2>
-        <img src="https://media.licdn.com/dms/image/v2/D5603AQHmCD0FiK7-3g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1707073143124?e=1791417600&v=beta&t=XATjbBX3iayU8UkdC5bxC99UxCjf-lFtTnzxaS08OTQ" alt="Foto Profil" class="profile-photo">
-        <p>
-            Halo! Saya <strong>Kharel</strong>, mahasiswa Sains Data dengan NIM <strong>23090250017</strong>.
-            Saya tertarik pada analisis data penjualan, visualisasi data, dan pengembangan dashboard interaktif.
-            Kunjungi <a href="https://github.com/Karelptrp" target="_blank">GitHub saya</a> untuk melihat proyek lainnya.
-        </p>
-    </section>
-
     <section class="metrics-section">
-        <h2>Metrik Utama (KPI)</h2>
-        <div class="metric-card" id="total-revenue">
+        <div class="metric-card">
             <h3>Total Pendapatan</h3>
             <p class="metric-value">Rp 1.250.000.000</p>
             <p class="metric-change positive">▲ 12.5% dari bulan lalu</p>
         </div>
-        <div class="metric-card" id="total-orders">
+        <div class="metric-card">
             <h3>Total Pesanan</h3>
             <p class="metric-value">8.432</p>
             <p class="metric-change positive">▲ 5.2% dari bulan lalu</p>
         </div>
-        <div class="metric-card" id="avg-order">
+        <div class="metric-card">
+            <h3>Tingkat Konversi</h3>
+            <p class="metric-value">3.85%</p>
+            <p class="metric-change positive">▲ 0.4% dari bulan lalu</p>
+        </div>
+        <div class="metric-card">
+            <h3>Produk Terjual</h3>
+            <p class="metric-value">12.480 unit</p>
+            <p class="metric-change negative">▼ 1.5% dari bulan lalu</p>
+        </div>
+        <div class="metric-card">
             <h3>Rata-rata Nilai Pesanan</h3>
             <p class="metric-value">Rp 148.250</p>
             <p class="metric-change negative">▼ 2.1% dari bulan lalu</p>
         </div>
     </section>
 
-    <section class="table-section">
-        <h2>Data Penjualan per Kategori Produk</h2>
-        <table class="data-table">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Kategori Produk</th>
-                    <th>Jumlah Terjual</th>
-                    <th>Pendapatan (Rp)</th>
-                    <th>Kontribusi (%)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Elektronik</td>
-                    <td>2.150</td>
-                    <td>625.000.000</td>
-                    <td>50.0</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Fashion</td>
-                    <td>3.420</td>
-                    <td>375.000.000</td>
-                    <td>30.0</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Makanan & Minuman</td>
-                    <td>1.862</td>
-                    <td>187.500.000</td>
-                    <td>15.0</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Kesehatan</td>
-                    <td>1.000</td>
-                    <td>62.500.000</td>
-                    <td>5.0</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+    <div class="dashboard-grid">
+        
+        <main class="main-content">
+            <section class="card-box">
+                <h2>Data Penjualan per Kategori</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Kategori Produk</th>
+                            <th>Terjual</th>
+                            <th>Pendapatan (Rp)</th>
+                            <th>Kontribusi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Elektronik</td>
+                            <td>2.150</td>
+                            <td>625.000.000</td>
+                            <td>50.0%</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Fashion</td>
+                            <td>3.420</td>
+                            <td>375.000.000</td>
+                            <td>30.0%</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Makanan &amp; Minuman</td>
+                            <td>1.862</td>
+                            <td>187.500.000</td>
+                            <td>15.0%</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Kesehatan</td>
+                            <td>1.000</td>
+                            <td>62.500.000</td>
+                            <td>5.0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-    <section class="form-section">
-        <h2>Tambah Data Penjualan</h2>
-        <form>
-            <label for="kategori">Kategori Produk:</label>
-            <input type="text" id="kategori" name="kategori" placeholder="Contoh: Elektronik">
+            <section class="card-box">
+                <h2>Visualisasi Tren Penjualan</h2>
+                <div class="chart-placeholder">
+                    📈 [ Area Grafik Chart.js / Plotly ]
+                </div>
+            </section>
+        </main>
 
-            <label for="jumlah">Jumlah Terjual:</label>
-            <input type="text" id="jumlah" name="jumlah" placeholder="Contoh: 1500">
+        <!-- KOLOM KANAN (SIDEBAR: FORM INPUT) -->
+        <aside class="sidebar-content">
+            <section class="card-box">
+                <h2>Tambah Data Penjualan</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="kategori">Kategori Produk:</label>
+                        <input type="text" id="kategori" placeholder="Contoh: Elektronik">
+                    </div>
+                    <div class="form-group">
+                        <label for="jumlah">Jumlah Terjual:</label>
+                        <input type="number" id="jumlah" placeholder="Contoh: 1500">
+                    </div>
+                    <div class="form-group">
+                        <label for="pendapatan">Total Pendapatan (Rp):</label>
+                        <input type="number" id="pendapatan" placeholder="Contoh: 250000000">
+                    </div>
+                    <button type="submit" class="btn-primary">Simpan Transaksi</button>
+                </form>
+            </section>
+        </aside>
 
-            <label for="catatan">Catatan:</label>
-            <textarea id="catatan" name="catatan" rows="3" placeholder="Catatan tambahan..."></textarea>
+    </div>
 
-            <button type="submit">Simpan Data</button>
-        </form>
-    </section>
-
-    <section class="analysis-section">
-        <h3>Analisis Perubahan Visual (HTML vs HTML+CSS):</h3>
-        <p>
-             Perbedaan paling terasa antara HTML polos dan HTML yang dipadukan dengan CSS terletak pada penyampaian hierarki visual serta struktur antarmuka. HTML polos hanya menyusun elemen secara linier dan bertumpuk dari atas ke bawah, sehingga data sulit dipindai (*scannable*) dan terkesan kaku. Setelah CSS diterapkan, tampilan visual berubah drastis menjadi tata letak yang teratur—seperti penggunaan grid atau flexbox untuk kartu metrik—serta memberikan respon interaktif yang membuat antarmuka terasa jauh lebih modern dan profesional.
-        </p>
-        <p>
-        Pengaturan <strong>margin</strong>, <strong>padding</strong>, dan <strong>warna</strong> sangat penting untuk menjaga keterbacaan data. Margin dan padding memberikan ruang bernapas (<em>whitespace</em>) agar informasi tidak saling berdempetan, sehingga mata pengguna tidak cepat lelah saat membaca informasi angka yang padat. Sementara itu, warna berfungsi sebagai penanda visual dan pembeda prioritas data. Dalam konteks dashboard data, CSS berperan mengelompokkan informasi penting, mengarahkan fokus pengguna ke indikator utama (KPI), serta memberikan penekanan status seperti warna hijau untuk tren positif dan merah untuk tren negatif.
-        </p>
-    </section>
-    
 </body>
 </html>
